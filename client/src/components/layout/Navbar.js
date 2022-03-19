@@ -63,7 +63,7 @@ Navbar.propTypes = {
 };
 
 Navbar.defaultProps = {
-    title: 'List Of Super Heros',
+    title: 'My Favorite Super Heros',
     about: 'About App',
     icon: 'fas fa-id-card-alt',
     icon2: 'fas fa-question-circle'

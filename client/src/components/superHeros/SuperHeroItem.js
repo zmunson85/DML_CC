@@ -25,8 +25,9 @@ const SuperHeroItem = ({ superHero }) => {
             </h3>
             <ul className='list'>
                 {age && (
+
                     <li>
-                        <i className='fas fa-envelope-open' /> {age}
+                        <i className='fa fa-info-circle' /> Age: {age}
                     </li>
                 )}
             </ul>
@@ -39,6 +40,9 @@ const SuperHeroItem = ({ superHero }) => {
                 </button>
                 <button className='btn btn-danger btn-sm' onClick={onDelete}>
                     Delete
+                </button>
+                <button className='btn btn-primary btn-sm' onClick={(superHero) => console.log('DetailView')}>
+                    DetailView
                 </button>
             </p>
         </div>

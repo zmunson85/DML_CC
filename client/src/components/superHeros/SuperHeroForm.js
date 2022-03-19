@@ -60,12 +60,13 @@ const SuperHeroForm = () => {
                 onChange={onChange}
             />
             <input
+                className='ageInput'
                 type='number'
                 placeholder='Age'
                 name='age'
                 value={age}
-                min="0"
                 onChange={onChange}
+                min="0"
             />
             <div>
                 <input
