@@ -36,10 +36,12 @@ router.post('/', auth,
         }
 
         //pull data from body
-        const { name, age } = req.body;
+        const { name, humanName, homeTown, age } = req.body;
         try {
             const newSuperHero = new SuperHero({
                 name,
+                humanName,
+                homeTown,
                 age,
                 user: req.user.id
             });
@@ -55,10 +57,12 @@ router.post('/', auth,
 //@description Get all logged in user SuperHeros
 //@access Public
 router.put('/:id', auth, async (req, res) => {
-    const { name, age } = req.body;
+    const { name, humanName, homeTown, age } = req.body;
     //create superHero object based on user input
     const superHeroFields = {};
     if (name) superHeroFields.name = name;
+    if (humanName) superHeroFields.humanName = humanName;
+    if (humanName) superHeroFields.homeTown = homeTown;
     if (age) superHeroFields.age = age;
 
     try {

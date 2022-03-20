@@ -14,10 +14,16 @@ const SuperHeroItem = ({ superHero }) => {
     const { _id, name, age } = superHero;
 
     const onDelete = () => {
+        alert('Are you sure you want to delete this entry? ');
         deleteSuperHero(superHeroDispatch, _id);
         clearCurrent(superHeroDispatch);
     };
 
+    const clickHandler = () => {
+        alert(
+            `This super hero goes by "${superHero.humanName}", with "${superHero.homeTown}" listed as home town.`)
+
+    }
     return (
         <div className='card bg-light'>
             <h3 className='text-primary text-left'>
@@ -27,10 +33,13 @@ const SuperHeroItem = ({ superHero }) => {
                 {age && (
 
                     <li>
-                        <i className='fa fa-info-circle' /> Age: {age}
+                        Age: {age}
                     </li>
                 )}
             </ul>
+            <div>
+                {/* <img src=''></img> */}
+            </div>
             <p>
                 <button
                     className='btn btn-dark btn-sm'
@@ -41,8 +50,8 @@ const SuperHeroItem = ({ superHero }) => {
                 <button className='btn btn-danger btn-sm' onClick={onDelete}>
                     Delete
                 </button>
-                <button className='btn btn-primary btn-sm' onClick={(superHero) => console.log('DetailView')}>
-                    DetailView
+                <button className='btn btn-primary btn-sm' onClick={clickHandler}>
+                    <i id='infoIcon' className='fa fa-info-circle' />
                 </button>
             </p>
         </div>

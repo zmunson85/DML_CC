@@ -20,7 +20,7 @@ const SuperHeroFilter = () => {
     return (
 
         <form onSubmit={(e) => e.preventDefault()}>
-            <h3 className='text-primary'><i className='text-dark' class="fas fa-search"></i> Search A SuperHero </h3>
+            <h3 className='text-primary'><i id='searchIcon' className="fas fa-search"></i> Search A SuperHero </h3>
             <input type='text' placeholder='type here...' onChange={onChange} />
         </form>
     );

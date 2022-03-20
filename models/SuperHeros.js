@@ -10,6 +10,14 @@ const SuperHeroSchema = mongoose.Schema({
         type: String,
         required: true
     },
+    humanName: {
+        type: String,
+        required: true
+    },
+    homeTown: {
+        type: String,
+        required: true
+    },
     age: {
         type: Number,
         required: true

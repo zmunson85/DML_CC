@@ -8,6 +8,8 @@ import {
 
 const initialSuperHero = {
     name: '',
+    humanName: '',
+    homeTown: '',
     age: '',
 };
 
@@ -26,7 +28,7 @@ const SuperHeroForm = () => {
         }
     }, [current]);
 
-    const { name, age } = superHero;
+    const { name, humanName, homeTown, age } = superHero;
 
     const onChange = (e) =>
         setSuperHero({ ...superHero, [e.target.name]: e.target.value });
@@ -58,6 +60,23 @@ const SuperHeroForm = () => {
                 name='name'
                 value={name}
                 onChange={onChange}
+                required
+            />
+            <input
+                type='text'
+                placeholder='Human Name'
+                name='humanName'
+                value={humanName}
+                onChange={onChange}
+                required
+            />
+            <input
+                type='text'
+                placeholder='Home Town'
+                name='homeTown'
+                value={homeTown}
+                onChange={onChange}
+                required
             />
             <input
                 className='ageInput'
@@ -67,12 +86,14 @@ const SuperHeroForm = () => {
                 value={age}
                 onChange={onChange}
                 min="0"
+                required
             />
             <div>
                 <input
                     type='submit'
                     value={current ? 'Update SuperHero' : 'Add SuperHero'}
                     className='btn btn-primary btn-block'
+                    required
                 />
             </div>
             {current && (
