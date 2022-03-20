@@ -1,5 +1,7 @@
 import React from 'react';
+
 import PropTypes from 'prop-types';
+
 import {
     useSuperHeros,
     deleteSuperHero,
@@ -8,7 +10,7 @@ import {
 } from '../../context/superHero/SuperHeroState';
 
 const SuperHeroItem = ({ superHero }) => {
-    // we just need the superHero dispatch without state.
+
     const superHeroDispatch = useSuperHeros()[1];
 
     const { _id, name, age } = superHero;
@@ -19,9 +21,8 @@ const SuperHeroItem = ({ superHero }) => {
         clearCurrent(superHeroDispatch);
     };
 
-    const clickHandler = () => {
-        alert(
-            `This super hero goes by "${superHero.humanName}", with "${superHero.homeTown}" listed as home town.`)
+    const clickHandler = (props) => {
+        alert(`This super hero goes by " ${superHero.humanName}", with "${superHero.homeTown}" listed as home town.`)
 
     }
     return (
@@ -37,9 +38,6 @@ const SuperHeroItem = ({ superHero }) => {
                     </li>
                 )}
             </ul>
-            <div>
-                {/* <img src=''></img> */}
-            </div>
             <p>
                 <button
                     className='btn btn-dark btn-sm'

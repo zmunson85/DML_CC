@@ -58,8 +58,8 @@ const superHeroReducer = (state, action) => {
         case FILTER_SUPERHEROS:
             return {
                 ...state,
-                filtered: state.superHeros.filter(({ name, email }) => {
-                    const testString = `${name}${email}`.toLowerCase();
+                filtered: state.superHeros.filter(({ name, homeTown }) => {
+                    const testString = `${name}${homeTown}`.toLowerCase();
                     return testString.includes(action.payload.toLowerCase());
                 })
             };

@@ -1,4 +1,4 @@
 {
-    "mongoURI": "mongodb+srv://zmunson:Zachary..85@cluster0.ouckm.mongodb.net/users?retryWrites=true&w=majority",
+    "mongoURI": "mongodb+srv://zmunson:Zachary..85@cluster0.sbwon.mongodb.net/DML?retryWrites=true&w=majority",
     "jwtSecret": "SECRET"
 }
